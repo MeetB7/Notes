@@ -1,0 +1,16 @@
+UPPER BOUND - WORST CASE
+O(n²)       ~selection, bubble sort           read as big o of n square or order of n square
+O(n logn)   ~Merge Sort
+O(n)        ~linear search
+O(log n)    ~binary search
+O(1)
+
+LOWER BOUND - BEST CASE
+Ω use alt 234 to type omega
+Ω(n²)       ~slection sort
+Ω(n logn)   ~Merge Sort
+Ω(n)        ~bubble sort
+Ω(log n)
+Ω(1)        ~linear, binary
+If LOWER AND UPPER BOUND ARE SAME USE Θ (alt 233)
+eg. If you want to count everyone in the room, there is no better or worse case then counting 'n' numbers.

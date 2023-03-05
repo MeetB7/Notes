@@ -1,0 +1,11 @@
+sort(numbers)
+{
+if only one number
+    quit
+
+sort(left half)
+sort(right half)
+merge sorted halves
+}
+
+ Θ(n log n)

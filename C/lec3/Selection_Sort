@@ -1,0 +1,17 @@
+PsuedoCode
+
+For i from 0 to n-1
+    find the smallest between numbers[i] and numbers[n-1]
+    swap the number with numbers[i]
+
+
+no. of comparisions
+= (n-1)+(n-2)+(n-3)+.....+1
+= n(n-1)/2
+= n²/2 -n/2
+= O(n²)
+
+In best case as well it would take the same no of steps
+Ω(n²)
+
+therefore, Θ(n²)

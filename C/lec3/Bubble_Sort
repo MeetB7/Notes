@@ -1,0 +1,16 @@
+PsuedoCode
+
+Repeat (n-1) times
+    For i from 0 to (n-2)
+        If numbers[i] and numbers[i+1] are out of order
+            Swap them
+        If no swap
+
+
+no. of comparisions
+= (n-1) x (n-1)
+= n² -2n -1
+= O(n²)
+
+In the best case, i.e. it is already sorted
+Ω  will be n

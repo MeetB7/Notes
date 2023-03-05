@@ -1,0 +1,17 @@
+clang -o hello hello.c
+./hello
+
+"clang hello.c" will create a.out file by default. a.out = assembler output
+
+ for 3rd party libraries like cs50
+ clang -o hello hello.c -lcs50
+
+These are command line arguments
+"make hello" automates this process
+
+STEPS - 
+
+1. Preprocessing: it looks for all # files and sort of copies and pastes the code in that file so that you can use those functions
+2. Compiling: it converts the code into 'assembling language' -some sort of encryption
+3. Assembling: it converts the assembly code to machine code i.e. 0's and 1's
+4. Linking: it links my code, code of cs50 and code of stdio and other libraries

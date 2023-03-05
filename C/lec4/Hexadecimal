@@ -1,0 +1,16 @@
+Hexadecimal - 16 digits
+0 1 2 3 4 5 6 7 8 9 A B C D E F
+base - 16
+F = 15
+10 = 16
+11 = 17
+FF = 255 (2 hexadecimal digits)
+used in photoshop etc to represent amount a color in color code
+F in binary will use 4 bits (1111)
+FF will use 8 bits that is 1 byte (11111111)
+therefore, for colored pictures each pixel is 3 byte
+
+"00 00 FF" means 0 Red; 0 Green; and 255 Blue
+
+'0x' is a visual cue to tell whats ahead is a hexadecimal number
+eg: 0x1F is 31

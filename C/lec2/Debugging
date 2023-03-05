@@ -1,0 +1,4 @@
+printf can be used as debugger
+
+command line: debug50 ./hello can be used to go through code step by step
+you have to mention a stop line by clicking on a red dot next to the line number.
