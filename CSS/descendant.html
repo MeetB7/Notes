@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Descendant</title>
+    <style>
+        ul > li{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <ul>
+            <li>sublist item 1</li>
+            <li>sublist item 2</li>
+        </ul>
+        <li>list item 3</li>
+    </ol>
+</body>
+</html>
+<!--
+    ul > li means- all li directly under ul
+    ul li means- all li under ul, it may be under other tags 
+ -->
