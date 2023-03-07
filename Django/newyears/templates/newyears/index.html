@@ -1,0 +1,21 @@
+{% load static%}
+
+<!--django contains lot of features to make it easy for static files-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Is it New Year's ?</title>
+    <link rel="stylesheet" href="{% static 'newyears/styles.css'%}">
+</head>
+<body>
+    {% if newyears %}
+        <!-- this is used to write logic statements -->
+        <h1>YES!!</h1>
+    {% else %}
+        <h1>NO.</h1>
+    {% endif %}
+    <!-- here indentation is not required but above line is imp to mark an end to the logic statement
+    -->
+</body>
+</html>

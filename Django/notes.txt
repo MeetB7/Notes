@@ -1,0 +1,23 @@
+django-admin startproject __filename__
+
+manage.py is file which helps to execute commands on files
+settings.py contains imp configuration settings for django application
+urls.py is like table of contents of all the urls in the webapp that i can visit
+
+to run this django webapp :-
+python manage.py runserver
+ctrl C to exit server
+
+python manage.py startapp Hello
+this means under our 'Django' project ive created a 'hello' app
+
+i then added 'hello' in installed_apps in settings.py of this project ie 'Django'
+then made changes in views.py 
+created a file of urls.py in the hello directory
+added 'hello/' in urls.py of the project and included all the urls in hello.urls as well
+
+in path of urls.py of hello module "" means /hello iteself
+"meet" means /hello/meet
+
+now i changed views.index to render a html file hello>hello>index.html
+also views.greet
