@@ -3,6 +3,14 @@ ReactDOM.render(<ul>
     <li>Blue</li>
 </ul>, document.getElementById("root")) // document.querySelector("#root")
 
+
+// Doing something like this in Pure java will be hard ~
+// const h1 = document.createElement("h1")
+// h1.textContent = "This is an imperative way to program."
+// h1.className = "Header"
+// document.getElementById("root").append(h1)
+
+
 function Meet(){
     return(
         <h1>Hello!</h1>

@@ -12,11 +12,14 @@ public class hello{
         System.out.println("Enter your name: ");
         // sc.next() can be used to get string input but will end after a space
         String name = sc.nextLine();
-       
+        System.out.println("Enter char: ");
+        char ch = sc.nextLine().charAt(0);
+
         System.out.println("Enter age: ");
         int age = sc.nextInt();
 
         System.out.println(name + " is " + age+" years old.");
+        System.out.println(ch);
         sc.close();
     }
 }
