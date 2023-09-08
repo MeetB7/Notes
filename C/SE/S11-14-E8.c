@@ -48,7 +48,7 @@ int main(void)
     struct stack s1, s2;
     struct stack *ptr;
     struct node student;
-    struct node *peekptr;
+    struct node *peekptr , *newStudent;
     int choice, schoice = 0;
     s1.top = NULL;
     s2.top = NULL;
@@ -57,12 +57,12 @@ int main(void)
     while (1)
     {
         while(1){
-            printf("Select a stack (s1: 1 s2: 2 exit:3\n");
+            printf("Select a stack s1: 1 s2: 2 exit:3\n");
             scanf("%d", &schoice);
             if(schoice==1 || schoice==2)
             break;
             if(schoice == 3)
-            return 2;
+            return 0;
         }
         ptr = (schoice == 1 ? &s1 : &s2);
 
@@ -72,7 +72,7 @@ int main(void)
         switch (choice)
         {
         case 1:
-            struct node *newStudent = malloc(sizeof(struct node));
+            newStudent = (struct node *)malloc(sizeof(struct node));
             if (newStudent == NULL) {
                 printf("Memory allocation failed.\n");
                 return 1;
