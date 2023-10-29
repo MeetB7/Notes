@@ -80,16 +80,15 @@ void deleteEnd(struct cll *l)
     }
 }
 
-void traverse(struct cll *l){
-    struct node *temp = l->head;    
-    while (1) {
-        printf("%d ", temp->data);
+void traverse(struct cll *l)
+{
+    struct node *temp = l->head;
+    while (temp->next != l->head)
+    {
+        printf("%d    ", temp->data);
         temp = temp->next;
-
-        if (temp == l->head) {
-            break; 
-        }
     }
+    printf("%d    \n", temp->data);
 }
 
 int main()

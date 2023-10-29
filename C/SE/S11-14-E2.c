@@ -78,3 +78,116 @@ void traverse(struct list *l)
         ptr = ptr->next;
     } while (ptr->next != NULL);
 }
+
+void delpos(struct list* x,int k){
+    struct node* mp,*temp;
+    mp = x->head;
+    while(mp!=NULL && k!=1){
+        mp = mp->next;
+        k--;
+    }
+    if(k>1) printf("Position is greater than size of the list\n");
+    else{
+        temp = mp->next->next;
+        free(mp->next);
+        mp->next = temp;
+    }
+}
+void addpos(struct list *x, struct node* s, int k) {
+    struct node *mp, *temp;
+    mp = x->head;
+    while (mp->next != NULL && k!=1){
+        mp = mp->next;
+        k--;
+    }
+    if (k>1){
+        printf("Position is greater than size of the list.\n");
+    } 
+    else{
+        temp = mp->next;
+        mp->next = s;
+        s->next = temp;
+    }
+}
+int main(){
+    struct list list1,list2;
+    list1.head = list2.head = NULL;
+    struct list* listptr = NULL;
+    int listch,actionch,pos;
+    struct node* node;
+    while(1){
+        do{
+            printf("Select the list to operate on:\n1.List 1 \t 2.List 2\n");
+            scanf("%d",&listch);
+        }while(listch!=1 && listch!=2);
+        listptr = (listch == 1)? &list1 : &list2;
+        printf("Choose operation to be performed:\n");
+        printf("1.Addfront\t2.Deletefront\t3.Addend\t4.Deleteend\t5.Traverse\t6.Addgeneral\t7.Deletegeneral\n");
+        scanf("%d",&actionch);
+        switch(actionch){
+            case 1:
+            node = (struct node*)malloc(sizeof(struct node));
+            printf("Enter the rollnumber of new node: ");
+			scanf("%d", &node->data);
+            node->next = NULL;
+            if((*listptr).head == NULL){
+                (*listptr).head = node;
+            }
+            else    addfront(listptr,node);
+            break;
+            case 2:
+            if( (*listptr).head==NULL){
+					printf("Selected list is empty. Can not delete from the front of the list.\n");
+				}
+				else    deletefront(listptr);
+                break;
+            case 3:
+            node = (struct node*)malloc(sizeof(struct node));
+            printf("Enter the rollnumber of new node: ");
+			scanf("%d", &node->data);
+            (*node).next = NULL;
+            if((*listptr).head == NULL){
+                (*listptr).head = node;
+            }
+            else    addend(listptr,node);
+            break;
+            case 4:
+            if(listptr->head == NULL)
+            printf("cannot delete from an empty list\n");
+            else{
+                if((*((*listptr).head)).next==NULL)
+                {
+                    free((*listptr).head);
+					(*listptr).head=NULL;
+                }
+                else{
+                    deleteend(listptr);
+                }
+            }
+            break;
+            case 5:
+			if( (*listptr).head == NULL )
+			printf("Empty list\n");
+            break;
+            case 6:
+            node = (struct node*)malloc(sizeof(struct node));
+            printf("Enter the rollnumber of new node: ");
+			scanf("%d", &node->data);
+            node->next = NULL;
+            printf("Enter position: ");
+            scanf("%d",&pos);
+            pos--;
+            addpos(listptr,node,pos);
+            break;
+            case 7:
+            printf("Enter position: ");
+            scanf("%d",&pos);
+            pos--;
+            delpos(listptr,pos);
+            break;
+            default: return 0;
+        }
+        if(listptr->head != NULL)
+			traverse(listptr);
+    }
+}
