@@ -25,7 +25,7 @@ public class q17 {
 
         // Creating threads for deposit and withdrawal
         Thread depositThread = new Thread(() -> {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 6; i++) {
                 account.deposit(100);
                 try {
                     Thread.sleep(1000);
@@ -36,7 +36,7 @@ public class q17 {
         });
 
         Thread withdrawThread = new Thread(() -> {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 6; i++) {
                 account.withdraw(80);
                 try {
                     Thread.sleep(1000);
@@ -48,6 +48,14 @@ public class q17 {
 
         depositThread.start();
         withdrawThread.start();
+
+        try {
+            depositThread.join();
+            withdrawThread.join();
+            System.out.println(account.balance);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 

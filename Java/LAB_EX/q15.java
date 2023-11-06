@@ -31,7 +31,10 @@ public class q15 {
         gender = new CheckboxGroup();
         male = new Checkbox("male", gender, false);
         female = new Checkbox("female", gender, false);
-
+        male.setBounds(500,500,80,40);
+        female.setBounds(700,500, 80, 40);
+        frame.add(male);
+        frame.add(female);
 
     }
     public static void main(String[] args) {
