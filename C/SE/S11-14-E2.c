@@ -96,7 +96,7 @@ void delpos(struct list* x,int k){
 void addpos(struct list *x, struct node* s, int k) {
     struct node *mp, *temp;
     mp = x->head;
-    while (mp->next != NULL && k!=1){
+    while (mp->next != NULL && k>1){
         mp = mp->next;
         k--;
     }
